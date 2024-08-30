@@ -1,0 +1,6 @@
+about-time==4.2.1
+alive-progress==3.1.5
+asgiref==3.8.1
+grapheme==0.6.0
+sqlparse==0.5.1
+tzdata==2024.1
