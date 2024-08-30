@@ -2,6 +2,8 @@
 
 This Django app provides models to manage and store hierarchical address information in the Philippines, including Regions, Provinces, Municipalities, and Barangays.
 
+PyPi URL: (phil-loc)[https://pypi.org/project/phil-loc/]
+
 ## Models Overview
 
 ### 1. **Region**
@@ -106,5 +108,3 @@ This project is licensed under the MIT License.
 ---
 
 This `README` gives an overview of the models, their fields, and relationships, and provides a basic usage example for the `PhAddress` model. Adjust the `phil_loc` placeholders and add any additional information as needed for your specific application.
-
-PyPi URL: (phil-loc)[https://pypi.org/project/phil-loc/]
