@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: phil-loc
-Version: 0.5.5
-Summary: django library package for Locations/Addresses in the Phillipines based on Philippine Standard Geographic Code(PSGC) 
+Version: 0.5.6
+Summary: Django library package for Locations/Addresses in the Phillipines based on Philippine Standard Geographic Code(PSGC)
 Home-page: https://github.com/delletran/phil_loc
 Author: Rodel Letran
 Author-email: delioletran@gmail.com
@@ -27,6 +27,9 @@ License-File: LICENSE
 # Philippines Address Management
 
 This Django app provides models to manage and store hierarchical address information in the Philippines, including Regions, Provinces, Municipalities, and Barangays.
+
+PyPi URL: [phil-loc](https://pypi.org/project/phil-loc/) 
+- https://pypi.org/project/phil-loc/
 
 ## Models Overview
 
