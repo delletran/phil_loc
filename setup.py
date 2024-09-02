@@ -2,11 +2,11 @@ from setuptools import setup, find_packages
 
 setup(
     name='phil_loc',
-    version='0.5.6',
+    version='0.5.7',
     packages=find_packages(),
     include_package_data=True,
     license='MIT License',
-    description='Django library package for Locations/Addresses in the Phillipines based on Philippine Standard Geographic Code(PSGC)',
+    description='Django library package for Locations/Addresses in the Philippines based on Philippine Standard Geographic Code(PSGC)',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/delletran/phil_loc',
