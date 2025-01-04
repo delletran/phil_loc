@@ -1,7 +1,7 @@
 from rest_framework.generics import ListAPIView
 
-from ..models import Barangay, Municipality, Province, Region
-from ..serializers.locations import (BarangaySerializer, CityMunSerializer,
+from .models import Barangay, Municipality, Province, Region
+from .serializers import (BarangaySerializer, CityMunSerializer,
                            ProvinceSerializer, RegionSerializer)
 
 

@@ -1,6 +1,6 @@
 from django.urls import path
 
-from ..views.locations import (BarangayListAPIView, CityMunListAPIView,
+from .views import (BarangayListAPIView, CityMunListAPIView,
                                ProvinceListAPIView, RegionListAPIView)
 
 app_name = 'locations'

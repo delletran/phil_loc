@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from ..models import (PhAddress, Barangay, Municipality, Province, Region)
+from .models import (PhAddress, Barangay, Municipality, Province, Region)
 
 
 class RegionSerializer(serializers.ModelSerializer):

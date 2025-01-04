@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='phil_loc',
-    version='0.6.0',
+    version='0.6.1',
     packages=find_packages(),
     include_package_data=True,
     license='MIT License',
@@ -31,5 +31,6 @@ setup(
     ],
     install_requires=[
         'django>=5.1',
+        'djangorestframework>=3.15.2',
     ],
 )

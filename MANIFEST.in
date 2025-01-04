@@ -2,6 +2,3 @@ include README.md
 include LICENSE
 recursive-include phil_loc/static *
 recursive-include phil_loc/management *
-recursive-include phil_loc/urls *
-recursive-include phil_loc/views *
-recursive-include phil_loc/serializers *
