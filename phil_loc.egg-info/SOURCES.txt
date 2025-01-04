@@ -12,7 +12,6 @@ phil_loc/admin.py
 phil_loc/apps.py
 phil_loc/models.py
 phil_loc/tests.py
-phil_loc/views.py
 phil_loc.egg-info/PKG-INFO
 phil_loc.egg-info/SOURCES.txt
 phil_loc.egg-info/dependency_links.txt

@@ -1,4 +1,7 @@
 from django.test import TestCase
+from django.urls import reverse
+from rest_framework.test import APIClient
+from rest_framework import status
 from phil_loc.models import Barangay, Municipality, Province, Region, PhAddress
 
 
@@ -170,3 +173,56 @@ class PhAddressModelTest(TestCase):
         self.assertEqual(self.ph_address.zip_code, 1000)
         self.assertTrue(isinstance(self.ph_address, PhAddress))
         self.assertEqual(str(self.ph_address), f"{self.ph_address.pk}")
+
+
+class LocationAPITestCase(TestCase):
+    def setUp(self):
+        self.client = APIClient()
+
+        # Create test data
+        self.region = Region.objects.create(name="Test Region", reg_code=1)
+        self.province = Province.objects.create(
+            name="Test Province",
+            reg_code=self.region.reg_code,
+            prov_code=1,
+            region=self.region
+        )
+        self.municipality = Municipality.objects.create(
+            name="Test Municipality",
+            city_mun_code=1,
+            prov_code=self.province.prov_code,
+            province=self.province
+        )
+        self.barangay = Barangay.objects.create(
+            name="Test Barangay",
+            brgy_code=1,
+            city_mun_code=self.municipality.city_mun_code,
+            municipality=self.municipality
+        )
+
+    def test_region_list(self):
+        url = reverse('locations:region-list')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertContains(response, self.region.name)
+
+    def test_province_list(self):
+        url = reverse('locations:province-list',
+                      kwargs={'reg_code': self.region.reg_code})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertContains(response, self.province.name)
+
+    def test_municipality_list(self):
+        url = reverse('locations:municipality-list',
+                      kwargs={'prov_code': self.province.prov_code})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertContains(response, self.municipality.name)
+
+    def test_barangay_list(self):
+        url = reverse('locations:barangays-list',
+                      kwargs={'city_mun_code': self.municipality.city_mun_code})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertContains(response, self.barangay.name)

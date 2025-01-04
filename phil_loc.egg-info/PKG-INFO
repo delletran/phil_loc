@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: phil-loc
-Version: 0.5.6
-Summary: Django library package for Locations/Addresses in the Phillipines based on Philippine Standard Geographic Code(PSGC)
+Version: 0.5.8
+Summary: Django library package for Locations/Addresses in the Philippines based on Philippine Standard Geographic Code(PSGC)
 Home-page: https://github.com/delletran/phil_loc
 Author: Rodel Letran
 Author-email: delioletran@gmail.com
