@@ -116,14 +116,14 @@ class PhAddress(models.Model):
         to=Region,
         verbose_name=_("Region"),
         db_column='region_id',
-        related_name='address_region',
+        related_name='ph_addresses',
         on_delete=models.DO_NOTHING,
     )
     province = models.ForeignKey(
         to=Province,
         verbose_name=_("Province"),
         db_column='province_id',
-        related_name='address_province',
+        related_name='ph_addresses',
         on_delete=models.DO_NOTHING,
     )
     municipality = models.ForeignKey(
@@ -137,7 +137,7 @@ class PhAddress(models.Model):
         to=Barangay,
         verbose_name=_("Barangay"),
         db_column='barangay_id',
-        related_name='address_barangay',
+        related_name='ph_addresses',
         on_delete=models.DO_NOTHING,
         null=True,
         blank=True
